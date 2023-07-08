@@ -1,0 +1,467 @@
+<html lang="en"><head><title>Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/SglpK98hSCn2CroR0bKRSJl5/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-jsz71vr28WOZtIr+0bD+k3A9A6dAPoM8Dlv5v9+9/zyWS2vUOFGPeZnFt9FCJ2Cg"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <style>
+        html,body{
+          width: 100%;
+          height: 100%;
+          margin: 0%;
+          padding: 0%;
+          overflow-x: hidden;
+        }
+        #loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  
+  
+        .fixed-top {
+     position: fixed;
+       top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      
+  
+    }
+        .slideshow {
+            position: relative;
+            height: 700px;
+            width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            
+        }
+        .slideactive1{
+          width:1500px ;
+        }
+        .container{
+            background-size: cover;
+        }
+  
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width:auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+  
+        .slide.active {
+            opacity: 1;
+        }
+        .hero-section {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  }
+  
+  .hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  .hero-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  }
+  
+  .about-section {
+  padding: 100px 0;
+  background-color: #fff;
+  }
+  
+  .section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  .section-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  }
+  
+  .services-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  }
+  
+  .service-item {
+  text-align: center;
+  margin-bottom: 40px;
+  }
+  
+  .service-item i {
+  font-size: 36px;
+  margin-bottom: 20px;
+  }
+  
+  .service-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  .service-description {
+  font-size: 18px;
+  }
+  
+  /* .contact-section {
+  padding: 100px 0;
+  background-color: #fff;
+  } */
+  
+  
+  .contact-section .section-title {
+  margin-bottom: 40px;
+  }
+  
+  .contact-section form .form-group {
+  margin-bottom: 20px;
+  }
+  
+  .contact-section form textarea {
+  resize: none;
+  }
+  
+  .footer-section {
+  background-color: #333;
+  }
+  
+  .footer-section p {
+  margin: 0;
+  }
+  
+  @media (max-width: 768px) {}
+  .hero-section {
+    padding: 60px 0;
+    background-color: #181818;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+  }
+   
+  
+  .about-section {
+    padding: 60px 0;
+    /* background-color: #645e5e; */
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .section-description {
+    font-size: 16px;
+  }
+  
+  /* .services-section {
+    /* padding: 60px 0; */
+  */
+  
+  .service-item i {
+    font-size: 28px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+  }
+  
+  
+  .service-description {
+    font-size: 16px;
+  }
+  
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-section form textarea {
+    font-size: 14px;
+  }
+    
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      
+      display: inline-flex;
+      align-items: center;
+    
+  
+    }
+    
+  
+  
+      
+    </style>
+    
+</head>
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-front">
+                    <a class="navbar-brand" href="#"><img src="http://ashokassociates.org/assets/themes/site/images/logo.png" alt="" width="50%"></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item list-unstyled">
+                            <a class="nav-link" style="color: #72C02C;" href="ashokassociate1.html">HOME</a>
+                          </li>
+                        
+                          <li class="nav-item list-unstyled">
+                            <a class="nav-link text-dark" href="profile.html">PROFILES</a>
+                          </li>
+                          <li class="nav-item list-unstyled">
+                            <a class="nav-link text-dark" href="projects.html">PROJECTS</a>
+                          </li>
+                          <li class="nav-item list-unstyled">
+                            <a class="nav-link text-dark" href="clients.html">CLIENTS</a>
+                          </li>
+                          <li class="nav-item list-unstyled">
+                              <a class="nav-link text-dark" href="career.html">CAREER</a>
+                            </li>
+                            <li class="nav-item list-unstyled">
+                              <a class="nav-link text-dark" href="#contacts1">CONTACTS</a>
+                            </li>
+                           
+                            
+                              
+                    </div>
+                  </nav>
+            </div>
+            </div>
+            </div>
+            <div class="slideshow" style="width: 100%;">
+                <img class="slideactive1" src="https://images.squarespace-cdn.com/content/v1/542032d5e4b0968055ce5118/1590821174418-EN1TWKVGTXP9AAVN7NDI/image-asset.jpeg?format=1500w"  alt="Las Vegas Photo 1">
+                <img class="slide" src="https://ashokassociates.org/assets/themes/site/images/bg6.jpg" alt="Las Vegas Photo 2">
+            </div>
+        
+            <script>
+                // JavaScript for slide transition
+                const slides = document.querySelectorAll('.slide');
+                let currentSlide = 0;
+        
+                function showSlide() {
+                    slides.forEach((slide, index) => {
+                        if (index === currentSlide) {
+                            slide.classList.add('active');
+                        } else {
+                            slide.classList.remove('active');
+                        }
+                    });
+                }
+        
+                setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide();
+                }, 3000);
+           
+        </script>
+        
+        
+        
+        <div class="container" style="padding-top: 100px;">
+          <h1 class="text-center" style="font-family:  'Playfair Display';font-size: 3rem;">Our Team</h1>
+          <div class="row" style="padding-top: 100px;">
+            <div class="col-md-4" style="padding-top: 30px;">
+              <img src="https://img.freepik.com/free-photo/two-happy-partners-shaking-hands-cafe_1262-3667.jpg"  alt="Team Member 1" class="img-fluid">
+              <h3 class="text-center">John Doe</h3>
+              <p class="text-center">Architect</p>
+              <div class="d-flex justify-content-center">
+              <a href="resume_johndoe.pdf" class="btn btn-primary">View Resume</a>
+              </div>
+            </div>
+            <div class="col-md-4" style="padding-top: 30px;">
+              <img src="https://img.freepik.com/premium-photo/handsome-male-client-signing-document-meeting-with-real-estate-agent_109710-1809.jpg" alt="Team Member 2" class="img-fluid">
+              <h3 class="text-center">Jane Smith</h3>
+              <p class="text-center">Designer</p>
+              <div class="d-flex justify-content-center">
+              <a href="resume_janesmith.pdf" class="btn btn-primary">View Resume</a>
+              </div>
+            </div>
+            <div class="col-md-4" style="padding-top: 30px;">
+              <img src="https://www.lockatong.com/wp-content/uploads/2019/05/structural-engineer.jpg" alt="Team Member 3" class="img-fluid">
+              <h3 class="text-center">Mike Johnson</h3>
+              <p class="text-center">Engineer</p>
+              <div class="d-flex justify-content-center">
+              <a href="resume_mikejohnson.pdf" class="btn btn-primary" >View Resume</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+     
+  
+          <!-- About Section -->
+          
+          
+         
+            
+            
+          <section class="about-section" style="padding-top: 100px;">
+            <div class="hero-image" style="height: 1000px;    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; background-repeat: no-repeat;
+    background-size: cover; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.pixabay.com/photo/2015/11/17/18/59/architecture-1048092_640.jpg');">
+      
+        <div class="hero-text" style="
+        position: absolute;
+        top: 20%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 2;">
+        
+          <h1 class="text-white" style="font-size: 28px;font-weight:bold;font-family: 'Playfair Display';font-size: 3rem;">About Us</h1>
+          <h1 class="text-white" style="font-family: 'Playfair Display';font-size: 3rem; "><b>WE BELIEVE IN COMMUNICATION</b></h1>
+           <h5 class="text-white" style="font-family: 'Playfair Display';"> We strive to be the best construction project consultant in Dubai</h5>
+          
+        </div>
+            
+          
+      
+           
+      <div class="container" style="padding-top: 400px;">
+      <h2 class="section-title text-center mb-5 text-white" style="text-align: center;font-family: 'Playfair Display';color: #282727;font-size: 3rem;">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fas fa-home" style="color: #d7d7d8;"></i>
+            <h4 class="service-title text-light" style="color: #d7d7d8;text-align: center;font-family: 'Playfair Display';color: #2c2a2a;">Residential Design</h4>
+            <p class="service-description text-white" style="font-family: 'Playfair Display'">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fas fa-building" style="color:#d7d7d8;"></i>
+            <h4 class="service-title text-white" style="text-align: center;font-family: 'Playfair Display';color: #2c2a2a;">Commercial Design</h4>
+            <p class="service-description text-white" style="font-family: 'Playfair Display'">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fas fa-city" style="color: #d7d7d8;"></i>
+            <h4 class="service-title text-white" style="text-align: center;font-family: 'Playfair Display';color: #2c2a2a;">Urban Planning</h4>
+            <p class="service-description text-white" style="text-align: center;font-family: 'Playfair Display';color: #2c2a2a;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+            </div>
+          </section>
+            
+            <!-- </div> -->
+            
+            
+        
+           
+  
+          
+          
+          
+          
+          
+          
+        
+          <!-- Contact Section -->
+          <div class="container">
+          <section id="contacts1" class="container my-5" style="padding-top: 100px;">
+            <h2 style="text-align: center;font-family: 'Playfair Display';color: #282727;font-size: 3rem">Contacts</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <form>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+              </div>
+              <div class="col-md-6" style="padding-top: 30px;">
+                <h5>Contact Information</h5>
+                <p>Address: 123 Main Street, City, Country</p>
+                <p>Phone: +1234567890</p>
+                <p>Email: info@ashokassociate.com</p>
+              </div>
+            </div>
+            
+          </section>   
+          </div>
+                                                                                     
+        
+          <!-- Footer -->
+          <footer class="bg-dark text-light text-center py-3">
+            &copy; 2023 Architectural Consultancy. All rights reserved.
+            
+            <div class="container" style="padding-top: 40px;">
+              <div class="row">
+                <div class="col">
+                  <div class="social-icons">
+                    <a href="#"><img src="https://img.freepik.com/premium-vector/purple-gradiend-social-media-logo_197792-1883.jpg?w=2000" alt="Instagram"></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="social-icons">
+                    <a href="#"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png" alt="twitter"></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="social-icons">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="twitter"></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="social-icons">
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="twitter"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          </section>
+          
+         
+        
+          <!-- Bootstrap and JavaScript Libraries -->
+          <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+       -->
+    </body>
+  </html>
